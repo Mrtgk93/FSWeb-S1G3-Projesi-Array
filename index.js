@@ -40,8 +40,9 @@ Aşağıdakileri yapmak için aşağıdaki kopyalama işlevini kullanın:
 */
 
 
-function kopyala(orijinalTatlar){
-  return orijinalTatlar;
+function kopyala(dizi){
+  let yeniDizi = [...dizi];
+  return yeniDizi;
 }
 
 
@@ -56,8 +57,8 @@ Bir dizinin tam olarak 25 çeşit olduğunu onaylayın. İşleviniz şunları ka
 */
 
 
-function dizi25Cesitmi(orijinalTatlar){
-if(orijinalTatlar.length===25){
+function dizi25Cesitmi(degisken){
+if(degisken.length===25){
   return true
   
 }  /*kod buraya*/
@@ -77,9 +78,9 @@ Aşağıdakileri yapmak için cesitEkle işlevini kullanın:
 */
 
 
-function cesitEkle(orijinalTatlar){
-  orijinalTatlar.unshift('Kakule');
-return orijinalTatlar;
+function cesitEkle(enfesTatlar){
+  enfesTatlar.unshift('Kakule');
+return enfesTatlar;
 }
 
 
@@ -96,11 +97,11 @@ Aşağıdakileri yapmak için sonCesitiKaldir işlevini kullanın:
 */
 
 
-function sonCesitiKaldir(orijinalTatlar){
-orijinalTatlar.pop();
-return orijinalTatlar;
+function sonCesitiKaldir(dizi2){
+dizi2.pop();
+return dizi2;
 }
-
+console.log(sonCesitiKaldir(orijinalTatlar));
 
 /* Görev 5:
 Dizideki belirli bir indeksteki çeşniyi döndüren bir işlev yazın.
@@ -134,8 +135,10 @@ Aşağıdakileri yapmak için ismeGoreCesitCikar işlevini kullanın:
   İPUCU: Bunun için .splice() kullanabilirsiniz.
 */
 
-function ismeGoreCesitCikar(){
-
+function ismeGoreCesitCikar(dizi,lezzet){
+  let index=dizi.indexOf(lezzet);
+dizi.splice(index,1);
+return dizi;
 }
 
 
