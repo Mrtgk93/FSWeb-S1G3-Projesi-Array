@@ -113,8 +113,8 @@ Aşağıdakileri yapmak için aşağıdaki indekstekiCesitiGetir işlevini kulla
 
    Örneğin: indekstekiCesitiGetir(orijinalTatlar, 2) çalıştırılmasıyla, Kakule'in başarıyla eklendiği varsayarsak sonuç "Ceviz" olucaktır.
 */
-function indekstekiCesitiGetir(orijinalTatlar,x){
-  let cesit = orijinalTatlar[x];
+function indekstekiCesitiGetir(orijinalTatlar,xmert){
+  let cesit = orijinalTatlar[xmert];
 return cesit;
 }
 
@@ -163,11 +163,15 @@ Aşağıdakileri yapmak için ismeGoreFiltrele işlevini kullanın:
 */
 
 
-function ismeGoreFiltrele(){
-
+function ismeGoreFiltrele(dizi,tat){
+let dizi2=[];
+for(let i=0 ; i<dizi.length ; i++){
+  if(dizi[i].includes(tat)){
+ dizi2.push(dizi[i]);
 }
 
-
+}return dizi2
+}
 
 /* ALIŞTIRMA */
 
